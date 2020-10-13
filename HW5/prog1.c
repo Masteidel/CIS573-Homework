@@ -5,6 +5,19 @@
 #include <sys/shm.h>
 #include "buffer.h"
 
-int main(int argc, char const *argv[]) {
+int main() {
+	key_t key = ftok("shmfile", 45);
+	int shmid = shmget(key, sizeof(bufferStruct), 0666 | IPC_CREAT);
+	bufferStruct *buffer = (bufferStruct *)shmat(shmid, (void *)0, 0);
+
+	for (int i = 0; i < MAX_SIZE; i++) {
+		buffer->content[i] = 0;
+	}
+
+	char c;
+	while ((c = fgetc(stdin)) == 'p') {
+		fflush(stdin);
+	}
+
 	return 0;
 }

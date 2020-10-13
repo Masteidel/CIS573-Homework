@@ -32,4 +32,6 @@ int main() {
 			printf("%d\n", buffer->content[i]);
 		}
 	}
+	
+	return 0;
 }
