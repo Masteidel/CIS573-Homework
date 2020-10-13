@@ -30,8 +30,8 @@ int main() {
 
 		for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE) {
 			printf("%d ", buffer->content[i]);
-			printf("%d\n", buffer->content[i]);
 		}
+		printf("\n");
 	}
 
 	return 0;
