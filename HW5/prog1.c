@@ -6,7 +6,7 @@
 #include "buffer.h"
 
 int main() {
-	char c;
+	char cmd;
 	key_t key = ftok("shmfile", 45);
 	int shmid = shmget(key, sizeof(bufferStruct), 0666 | IPC_CREAT);
 	bufferStruct *buffer = (bufferStruct *)shmat(shmid, (void *)0, 0);
