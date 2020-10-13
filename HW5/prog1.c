@@ -17,6 +17,7 @@ int main() {
 	char c;
 	while ((c = fgetc(stdin)) == 'p') {
 		fflush(stdin);
+		printf("\n");
 	}
 
 	return 0;
