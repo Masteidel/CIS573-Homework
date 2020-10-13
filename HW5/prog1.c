@@ -21,6 +21,10 @@ int main() {
 			fflush(stdin);
 			if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
 				printf("<Buffer is full>\n");
+				for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE){
+					printf("%d ", buffer->content[i]);
+				}
+				printf("/n");
 				continue;
 			}
 
@@ -29,8 +33,9 @@ int main() {
 
 			for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE){
 				printf("%d ", buffer->content[i]);
-				printf("%d\n", buffer->content[i]);
 			}
+			printf("\n");
+
 		} else if(cmd == 'c') {
 			fflush(stdin);
 			if (buffer->content[buffer->out] == 0) {
@@ -52,9 +57,11 @@ int main() {
 				printf("%d ", buffer->content[i]);
 				printf("%d\n", buffer->content[i]);
 			}
+
 		} else if(cmd == '0') {
 			fflush(stdin);
 			break;
+
 		} else {
 			fflush(stdin);
 			continue;
