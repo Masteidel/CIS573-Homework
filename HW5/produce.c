@@ -21,17 +21,17 @@ int main() {
 
 		if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
 			printf("<Buffer is full>\n");
-			continue;
+		} else {
+			buffer->in = (buffer->in + 1) % MAX_SIZE;
+			buffer->content[buffer->in] = 1+rand() % 100;
 		}
-
-		buffer->in = (buffer->in + 1) % MAX_SIZE;
-		buffer->content[buffer->in] = 1+rand() % 100;
 
 		for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE){
 			printf("%d ", buffer->content[i]);
-			printf("%d\n", buffer->content[i]);
 		}
+		printf("\n");
+		continue;
 	}
-	
+
 	return 0;
 }
