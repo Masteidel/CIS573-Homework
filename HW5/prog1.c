@@ -20,7 +20,7 @@ int main() {
 		if(cmd == 'p') {
 			fflush(stdin);
 			if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
-				printf("<Buffer is full>\n");
+				printf("<Buffer is full>");
 				for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE){
 					printf("%d ", buffer->content[i]);
 				}
