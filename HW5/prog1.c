@@ -15,7 +15,7 @@ int main() {
 	}
 
 	while(true) {
-		cmd = fgetc(stdin);
+		char cmd = fgetc(stdin);
 		if(cmd == 'p') {
 			fflush(stdin);
 			if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
