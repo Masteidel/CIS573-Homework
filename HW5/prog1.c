@@ -24,7 +24,7 @@ int main() {
 				for (int i = buffer->out; i != buffer->in; i = (i + 1) % MAX_SIZE){
 					printf("%d ", buffer->content[i]);
 				}
-				printf("/n");
+				printf("\n");
 				continue;
 			}
 
