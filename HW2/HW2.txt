@@ -1,0 +1,64 @@
+My Student Account is masteidel
+Today's Date is 09/22/2020
+
+                                 Apache License
+                           Version 2.0, January 2004
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+   1. Definitions.
+      Object form, made available under the License, as indicated by a
+      Licensor for the purpose of discussing and improving the Work, but
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      Work and such Derivative Works in Source or Object form.
+   3. Grant of Patent License. Subject to the terms and conditions of
+      Contribution(s) alone or by combination of their Contribution(s)
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+          Derivative Works a copy of this License; and
+      You may add Your own copyright statement to Your modifications and
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      Notwithstanding the above, nothing herein shall supersede or modify
+   6. Trademarks. This License does not grant permission to use the trade
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+   8. Limitation of Liability. In no event and under no legal theory,
+      Work (including but not limited to damages for loss of goodwill,
+   9. Accepting Warranty or Additional Liability. While redistributing
+      License. However, in accepting such obligations, You may act only
+   END OF TERMS AND CONDITIONS
+   APPENDIX: How to apply the Apache License to your work.
+      To apply the Apache License to your work, attach the following
+   Copyright [yyyy] [name of copyright owner]
+   Licensed under the Apache License, Version 2.0 (the "License");
+   You may obtain a copy of the License at
+   Unless required by applicable law or agreed to in writing, software
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+
+There are 51 lines that end with ".", ",", or ";".
+
+There are 6 lines that contain the word "owner".
+
+There are 2 lines that contain the string "owner" as part of a longer word.
+
+There are 82 words that are 8 characters long.
+
+There are 25 words that are 12 characters long.
+
+The average number of reactions is 230.117.
+
+The average number of comments is 224.356.
+
+The average number of shares is 40.0226.
+
+The average number of likes is 215.043.
+
+There are 4288 instances of the photo status type.
+
+There are 63 instances of the link status type.
+
+There are 2334 instances of the video status type.
+
+There are 365 instances of the status status type.
+
