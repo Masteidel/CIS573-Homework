@@ -14,7 +14,7 @@ int main() {
 		buffer->content[i] = 0;
 	}
 
-	while(true) {
+	while(1) {
 		char cmd = fgetc(stdin);
 		if(cmd == 'p') {
 			fflush(stdin);
