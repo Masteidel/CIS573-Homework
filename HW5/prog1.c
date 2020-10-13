@@ -16,7 +16,7 @@ int main() {
 	}
 
 	while(1) {
-		scanf("%c", cmd);
+		scanf("%c", &cmd);
 		if(cmd == 'p') {
 			fflush(stdin);
 			if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
