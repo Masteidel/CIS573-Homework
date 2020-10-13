@@ -19,7 +19,7 @@ int main() {
 		scanf("%c", &cmd);
 		if(cmd == 'p') {
 			fflush(stdin);
-			if (buffer->content[(buffer->in + 1) % MAX_SIZE]) {
+			if (buffer->content[(buffer->in + 2) % MAX_SIZE]) {
 				printf("<Buffer is full>\n");
 			} else {
 				buffer->in = (buffer->in + 1) % MAX_SIZE;
