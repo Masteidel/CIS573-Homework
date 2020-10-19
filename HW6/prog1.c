@@ -25,7 +25,7 @@ int main() {
 	bytesWritten = write(pipeFD[1], pkt[2], MSG_SIZE);
 	/* read from pipe */
 	for(index = 0; index < 3; index++) {
-		bytesRead = read(pipeFD[0], Buffer, MSG_SIZE);
+		bytesRead = read(pipeFD[0], Buffer, 50);
 		printf("%s (Chars read: %d)\n", Buffer, bytesRead);
 		printf("1234567890123456789012345678901234567890\n");
 	}
