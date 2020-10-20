@@ -26,10 +26,9 @@ void toString(char *str, int num) {
 int main(int argc, char **argv) {
 	char num_str[10];
 	int counter = 1;
-	int choice = 0;
+	char choice;
 	int file_desc = 0;
 	int l = 0;
-	int savedStdout = dup(1);
 
 	if (argc != 2) {
 		printf ("Invalid input file name\n");
@@ -49,22 +48,24 @@ int main(int argc, char **argv) {
 		switch (choice) {
 		case 'f':
 			l = dup(file_desc);
+			break;
 		
 		case 's':
-			dup2(l, 1);
-			toString (num_str, counter);
-			strcat(outBuffer, num_str);
-			strcat(outBuffer, "\n");
-			counter++;
-			write (l, outBuffer, strlen(outBuffer));
+			l = dup(1);
 			break;
 
-		case 0:
-			break;
+		case '0':
+			exit(0);
 
 		default:
 			printf("Invalid Choice\n");
+			continue;
 		}
+		toString (num_str, counter);
+		strcat(outBuffer, num_str);
+		strcat(outBuffer, "\n");
+		counter++;
+		write (l, outBuffer, strlen(outBuffer));
 	}
 	return 0;
 }
