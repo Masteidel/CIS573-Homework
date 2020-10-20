@@ -10,6 +10,7 @@ char *pkt[] = {
 	"Msg_2: Hello CIS370\n",
 	"Msg_3: Hello CIS370\n"
 };
+
 int main() {
 	int bytesWritten, bytesRead, totalBytesWritten = 0, index;
 	int pipeFD[2];
