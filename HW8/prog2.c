@@ -13,23 +13,18 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
-	if(argv[2] == NULL) {
-		fp1 = fopen("file1.txt", "r");
-	} else {
-		fp1 = fopen(argv[1], "r");
+	if(argc < 3) {
+		printf("Error! Please specify 3 files\n");
+		return 1;
 	}
 
-	if(argv[3] == NULL) {
-		fp2 = fopen("file2.txt", "r");
-	} else {
-		fp2 = fopen(argv[2], "r");
-	}
+	char *filename1 = argv[2];
+	char *filename2 = argv[3];
+	char *filename3 = argv[4];
 
-	if(argv[4] == NULL) {
-		fp3 = fopen("file3.txt", "w");
-	} else {
-		fp3 = fopen(argv[3], "w");
-	}
+	fp1 = fopen(filename1, "r");
+	fp2 = fopen(filename2, "r");
+	fp3 = fopen(filename3, "w");
 
 	if(strcmp(argv[1], "-s") == 0) {
 		
@@ -37,46 +32,26 @@ int main(int argc, char **argv) {
 			fputc(c, fp3);
 		}
 
+		fprintf(fp3, "\n");
+		
 		while ((c = fgetc(fp2)) != EOF) {
 			fputc(c, fp3);
 		}
+		
 	} else if(strcmp(argv[1], "-e") == 0) {
-		/*
 		while ((c = fgetc(fp2)) != EOF) {
 			fputc(c, fp3);
 		}
 
+		fprintf(fp3, "\n");
+
 		while ((c = fgetc(fp1)) != EOF) {
 			fputc(c, fp3);
 		}
-		*/
 	}
 
 	fclose(fp1);
 	fclose(fp2);
 	fclose(fp3);
-	/*
-	// Open two files to be merged
-	char c; 
-
-	if (fp1 == NULL || fp2 == NULL || fp3 == NULL) { 
-		puts("Could not open files"); 
-		exit(0); 
-	} 
-
-	// Copy contents of first file to file3.txt 
-	while ((c = fgetc(fp1)) != EOF) 
-		fputc(c, fp3); 
-
-	// Copy contents of second file to file3.txt 
-	while ((c = fgetc(fp2)) != EOF) 
-		fputc(c, fp3); 
-
-	printf("Merged file1.txt and file2.txt into file3.txt"); 
-
-	fclose(fp1); 
-	fclose(fp2); 
-	fclose(fp3);
-	*/ 
 	return 0; 
 }
